@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AwesomeBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-wQ-ACe">
+                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtz-p4-TJG">
+                                <rect key="frame" x="313" y="46" width="81" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Forward">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="forwardButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgW-ed-hP0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIy-U5-a8L">
+                                <rect key="frame" x="98" y="44" width="210" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="tlA-TU-eNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeb-IO-xb8">
+                                <rect key="frame" x="20" y="46" width="73" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backbuttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnq-jX-Ydd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gtz-p4-TJG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="2bp-ap-BNd"/>
+                            <constraint firstItem="UIy-U5-a8L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BD1-SD-8TR"/>
+                            <constraint firstAttribute="bottom" secondItem="j2g-wQ-ACe" secondAttribute="bottom" id="N8j-X5-YzT"/>
+                            <constraint firstItem="oeb-IO-xb8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="QI7-bR-eRK"/>
+                            <constraint firstItem="j2g-wQ-ACe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TnK-RG-kC8"/>
+                            <constraint firstItem="j2g-wQ-ACe" firstAttribute="top" secondItem="UIy-U5-a8L" secondAttribute="bottom" constant="6" id="Uan-pH-uBL"/>
+                            <constraint firstItem="gtz-p4-TJG" firstAttribute="leading" secondItem="UIy-U5-a8L" secondAttribute="trailing" constant="5" id="Zdx-HW-4cS"/>
+                            <constraint firstItem="oeb-IO-xb8" firstAttribute="width" secondItem="gtz-p4-TJG" secondAttribute="width" multiplier="0.897436" id="eTI-dp-sUr"/>
+                            <constraint firstItem="oeb-IO-xb8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g6F-g0-1bz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gtz-p4-TJG" secondAttribute="trailing" constant="20" id="iAI-sL-1MJ"/>
+                            <constraint firstItem="j2g-wQ-ACe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nUG-QE-FzI"/>
+                            <constraint firstItem="UIy-U5-a8L" firstAttribute="leading" secondItem="oeb-IO-xb8" secondAttribute="trailing" constant="5" id="op6-xW-5Fi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="oeb-IO-xb8" id="ORB-yq-HHd"/>
+                        <outlet property="forwardButton" destination="gtz-p4-TJG" id="UEl-MK-SL8"/>
+                        <outlet property="urlTextField" destination="UIy-U5-a8L" id="scC-F3-heS"/>
+                        <outlet property="webView" destination="j2g-wQ-ACe" id="oFY-Ri-o2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+</document>
